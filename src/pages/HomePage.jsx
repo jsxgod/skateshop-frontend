@@ -63,7 +63,9 @@ const HomePage = () => {
         className="explore-wrapper"
         onClick={() => handleNavigate("/products")}
       >
-        <h2>explore our shop</h2>
+        <h2>
+          <span>explore our shop</span>
+        </h2>
         <span></span>
       </button>
     </div>
