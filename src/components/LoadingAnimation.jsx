@@ -8,9 +8,9 @@ const LoadingAnimation = () => {
     <div className="loading-animation-wrapper">
       <motion.div
         className="svg-wrapper"
-        initial={{ scale: 0.8, opacity: 0 }}
+        initial={{ scale: 0.7, opacity: 0.5 }}
         animate={{
-          scale: 1.2,
+          scale: 0.8,
           opacity: 1,
           transition: {
             duration: 0.45,
@@ -20,7 +20,7 @@ const LoadingAnimation = () => {
           },
         }}
         exit={{
-          scale: 1.2,
+          scale: 0.8,
           opacity: 1,
           transition: {
             duration: 0.4,
