@@ -39,6 +39,7 @@ const HomePage = () => {
           onLoadedData={() => setVideoLoaded(true)}
           loop={true}
           autoPlay={true}
+          playsInline={true}
           width="100%"
           height="100%"
           preload="auto"

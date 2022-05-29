@@ -14,6 +14,7 @@ const AboutUsPage = () => {
       >
         <video
           autoPlay={true}
+          playsInline={true}
           width="100%"
           height="100%"
           preload="auto"
