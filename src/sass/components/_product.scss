@@ -5,6 +5,7 @@
     .background {
       position: fixed;
       height: 100vh;
+      min-height: -webkit-fill-available;
       width: 100%;
       background-color: #636363;
       top: 0;
@@ -98,5 +99,6 @@
 .skeleton-product {
   width: 100vw;
   height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: $background-color;
 }
