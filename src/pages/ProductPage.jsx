@@ -8,7 +8,7 @@ import {
 } from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../redux/features/products/productSlice";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const ProductPage = () => {
   const { id } = useParams();
@@ -34,17 +34,19 @@ const ProductPage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
         >
-          {productState.status === "success" ? (
-            <>
-              <ProductHeader productData={productState.data} />
-              <Product productData={productState.data} />
-              {productState.data.hasOwnProperty("details") && (
-                <Details productData={productState.data} />
-              )}
-            </>
-          ) : (
-            <LoadingAnimation />
-          )}
+          <AnimatePresence>
+            {productState.status === "success" ? (
+              <>
+                <ProductHeader productData={productState.data} />
+                <Product productData={productState.data} />
+                {productState.data.hasOwnProperty("details") && (
+                  <Details productData={productState.data} />
+                )}
+              </>
+            ) : (
+              <LoadingAnimation />
+            )}
+          </AnimatePresence>
         </motion.div>
       )}
     </motion.div>
