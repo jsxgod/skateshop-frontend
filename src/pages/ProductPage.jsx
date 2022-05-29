@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Details, Product, ProductHeader } from "../components";
+import {
+  Details,
+  LoadingAnimation,
+  Product,
+  ProductHeader,
+} from "../components";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProduct } from "../redux/features/products/productSlice";
 import { motion } from "framer-motion";
@@ -29,7 +34,7 @@ const ProductPage = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.2 }}
         >
-          {productState.status === "success" && (
+          {productState.status === "success" ? (
             <>
               <ProductHeader productData={productState.data} />
               <Product productData={productState.data} />
@@ -37,6 +42,8 @@ const ProductPage = () => {
                 <Details productData={productState.data} />
               )}
             </>
+          ) : (
+            <LoadingAnimation />
           )}
         </motion.div>
       )}
