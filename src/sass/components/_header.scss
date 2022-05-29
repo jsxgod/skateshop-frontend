@@ -14,7 +14,10 @@
       .logo-wrapper {
         width: 128px;
         position: relative;
+        height: 100%;
         img {
+          transform: scale(0.75);
+          display: block;
           width: 100%;
         }
       }
