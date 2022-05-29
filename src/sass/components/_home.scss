@@ -94,7 +94,10 @@
     background-image: linear-gradient(315deg, #4da1f0 0%, #ed11f5 100%);
 
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
     padding: 1.25rem;
     h2 {
       font-size: 1.5rem;
