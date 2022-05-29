@@ -98,17 +98,11 @@
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
     padding: 1.25rem;
-    h2 {
+    span {
+      font-weight: 600;
+      padding: 1.5rem;
       display: inline;
       font-size: 1.5rem;
-    }
-    span {
-      padding: 1.25rem;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
     }
   }
 }
