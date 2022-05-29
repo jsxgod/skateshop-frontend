@@ -1,0 +1,17 @@
+@import "variables";
+@import "./base/global";
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/header.scss";
+@import "./components/home.scss";
+@import "./components/aboutUs.scss";
+@import "./components/linkHistory.scss";
+@import "./components/gallery.scss";
+@import "./components/product.scss";
+@import "./components/productHeader.scss";
+@import "./components/details.scss";
+@import "./components/cart.scss";
+@import "./components/menu.scss";
+@import "./components/products.scss";
+@import "./components/filterSidebar.scss";

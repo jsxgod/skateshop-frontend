@@ -1,0 +1,53 @@
+.about-us-wrapper {
+  width: 100vw;
+  height: calc(100vh - #{$header-height});
+  padding: 0 32px;
+  position: relative;
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+    video {
+      object-fit: cover;
+    }
+  }
+  .about-us-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20% 0;
+    width: 100%;
+    height: 100%;
+    transition: color 0.3s ease-in-out;
+    color: $background-color;
+    .about-us-header {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 1rem;
+      h1 {
+        font-family: "Poppins";
+        font-size: 3rem;
+        font-weight: 700;
+      }
+    }
+    .about-us-text {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        line-height: 1.5;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        padding-left: 4px;
+      }
+    }
+  }
+}

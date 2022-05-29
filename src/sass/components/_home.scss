@@ -1,0 +1,112 @@
+.home-wrapper {
+  width: 100vw;
+  height: calc(100vh - #{$header-height});
+  padding: 0 32px;
+  position: relative;
+  .video-wrapper {
+    filter: brightness(70%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+    video {
+      object-fit: cover;
+    }
+  }
+  .background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .welcome-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem 0;
+    width: 100%;
+    height: 50%;
+    transition: color 0.3s ease-in-out;
+    color: $background-color;
+    &.dark-text {
+      color: $black;
+    }
+    &.light-text {
+      color: $white;
+    }
+    .text-wrapper {
+      background: rgba($white, 0.05);
+      grid-column: span 2;
+      grid-row: span 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      &:first-of-type {
+        //border-radius: 1rem 1rem 0 0;
+        padding-left: 1rem;
+      }
+      &:nth-of-type(2) {
+        padding-right: 1rem;
+        justify-content: center;
+      }
+      &:nth-of-type(3) {
+        //border-radius: 0 0 1rem 1rem;
+        justify-content: flex-end;
+      }
+      h1 {
+        font-family: "Poppins";
+        font-size: 6rem;
+        font-weight: 700;
+      }
+      img {
+        transform: translateX(1.5rem);
+        height: 100%;
+      }
+    }
+  }
+  .explore-wrapper {
+    border: none;
+    position: relative;
+    width: 100%;
+    height: 2rem;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #05d;
+    background-image: linear-gradient(315deg, #4da1f0 0%, #ed11f5 100%);
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 1.25rem;
+    h2 {
+      font-size: 1.5rem;
+    }
+    span {
+      padding: 1.25rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($white, 0.05);
+    }
+  }
+}

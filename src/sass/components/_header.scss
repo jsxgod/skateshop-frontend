@@ -1,0 +1,89 @@
+.header {
+  position: relative;
+  height: $header-height;
+  border-bottom: 1px solid rgba(66, 66, 67, 0.2);
+  .header-wrapper {
+    padding-right: 32px;
+    display: flex;
+    align-items: center;
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .logo-wrapper {
+        width: 128px;
+        position: relative;
+        img {
+          width: 100%;
+        }
+      }
+      .header-buttons-container {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        gap: 1.5rem;
+        .cart-button-wrapper {
+          &:hover {
+            cursor: pointer;
+          }
+          position: relative;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.5rem;
+          height: 2.5rem;
+          .cart-counter {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.1rem;
+            height: 1.1rem;
+            font-size: 0.875rem;
+            color: $black;
+            border-radius: 50%;
+            background-color: $white;
+          }
+          .cart-icon {
+            color: $black;
+            font-size: 1.5rem;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        .hamburger-menu-button {
+          width: 24px;
+          height: 16px;
+          padding: 0;
+          border: none;
+          position: relative;
+          background-color: inherit;
+          span {
+            position: absolute;
+            display: block;
+            background-color: $black;
+            height: 2px;
+            width: 100%;
+            margin-bottom: 5px;
+            &:first-child {
+              top: 0;
+            }
+            &:last-child {
+              bottom: 0;
+              margin-bottom: 0;
+            }
+            &.middle-bar {
+              position: absolute;
+              top: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

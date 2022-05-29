@@ -1,0 +1,80 @@
+.filter-sidebar {
+  background-color: $background-color;
+  min-height: calc(100vh - 72px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  padding: 4px 8px;
+  border-right: 1px solid rgba(66, 66, 67, 0.2);
+  .filter-sidebar-header-wrapper {
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+    }
+    .close-button-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(31px + 1rem);
+      .confirm,
+      .clear {
+        font-size: 0.875rem;
+      }
+      .close {
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+  .filter-button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    .filter-button {
+      border: 1px solid rgba(66, 66, 67, 0.2);
+      color: transparent;
+      background-image: linear-gradient(315deg, #4da1f0 0%, #ed11f5 100%);
+      background-clip: text;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .filter-sidebar-sections-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    .section-wrapper {
+      display: flex;
+      flex-direction: column;
+      h3 {
+        font-size: 0.9rem;
+      }
+      .section-options-container {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        .option-wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h4 {
+            font-size: 0.8rem;
+          }
+          .checkbox-wrapper {
+            width: min-content;
+            input {
+            }
+          }
+        }
+      }
+    }
+  }
+}

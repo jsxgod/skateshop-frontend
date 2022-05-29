@@ -1,0 +1,24 @@
+.link-history {
+  height: 72px;
+  border-bottom: 1px solid rgba(66, 66, 67, 0.2);
+  .link-history-wrapper {
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .link-history-links-container {
+      display: flex;
+      .link-history-link {
+        font-size: 0.875rem;
+        opacity: 0.5;
+        &:first-child:after {
+          content: ">";
+          margin: 0 1rem;
+        }
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

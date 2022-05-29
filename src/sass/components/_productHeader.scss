@@ -1,0 +1,99 @@
+.product-header {
+  padding: 0 32px;
+  .product-info-wrapper {
+    padding: 4.5rem 0 4.5rem;
+    .product-info-content {
+      font-family: "Poppins";
+      .content-header-wrapper {
+        display: flex;
+        justify-content: space-between;
+        h4 {
+          font-size: 0.875rem;
+          margin: 0 0 1rem 0;
+          line-height: 1;
+        }
+        .back-arrow-icon {
+          color: $black;
+          font-size: 0.875rem;
+        }
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+      }
+      p {
+        font-weight: 300;
+        font-size: 0.875rem;
+        line-height: 1.2;
+      }
+      .add-to-cart-form {
+        display: flex;
+        flex-direction: column;
+        padding: 4px 0;
+        gap: 4px;
+        .buttons-container {
+          margin-top: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          button {
+            height: 56px;
+            padding: 0 1.5rem;
+            background-color: #05d;
+            background-image: linear-gradient(315deg, #4da1f0 0%, #ed11f5 100%);
+            color: $white;
+            border: none;
+            font-size: 0.875rem;
+            line-height: 1;
+            border-radius: 100vw;
+            &:hover {
+              cursor: pointer;
+            }
+            box-shadow: 0.5px 1px 1px hsl(0deg, 10%, 60%);
+          }
+          svg {
+            border: 1px solid $black;
+            font-size: 3rem;
+            color: $black;
+            border-radius: 50%;
+            padding: 8px;
+            width: 3.5rem;
+            height: 3.5rem;
+            &:hover {
+              cursor: pointer;
+            }
+            margin-right: 1.5rem;
+            box-shadow: 0.5px 1px 1px hsl(0deg, 10%, 60%);
+          }
+        }
+        h5 {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-bottom: 1rem;
+          position: relative;
+          padding-top: 1rem;
+          padding-left: 8px;
+        }
+        .size-options-container {
+          display: flex;
+          align-items: center;
+          padding: 0 8px;
+          .size-option-wrapper {
+            label {
+              input {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
