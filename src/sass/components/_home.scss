@@ -99,6 +99,8 @@
     -webkit-box-decoration-break: clone;
     padding: 1.25rem;
     span {
+      background-clip: text;
+      -webkit-background-clip: text;
       font-weight: 600;
       padding: 1.5rem;
       display: inline;
