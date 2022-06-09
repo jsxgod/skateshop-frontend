@@ -73,7 +73,7 @@ const ProductHeader = () => {
                 <h5>Pick size</h5>
                 <div className="size-options-container">
                   {productData.available_sizes.map((size) => (
-                    <div className="size-option-wrapper">
+                    <div key={size.value} className="size-option-wrapper">
                       <label>
                         <input
                           type="radio"
