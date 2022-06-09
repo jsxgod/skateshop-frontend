@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import BackgroundVideo from "../assets/videos/walk.mp4";
-import Logo from "../assets/infinity-logo.png";
 import BackgroundImage from "../assets/homepage-background.jpg";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -48,15 +47,19 @@ const HomePage = () => {
           <source src={BackgroundVideo} type="video/mp4" />
         </video>
       </div>
-      <div className={`welcome-wrapper `}>
+      <div
+        className={`welcome-wrapper ${
+          videoLoaded ? "light-text" : "dark-text"
+        }`}
+      >
         <div className="text-wrapper">
           <h1>Skate</h1>
         </div>
         <div className="text-wrapper">
-          <h1>to</h1>
+          <h2>beyond</h2>
         </div>
         <div className="text-wrapper">
-          <img src={Logo} alt="∞" />
+          <h2>infinity</h2>
         </div>
       </div>
       <button
