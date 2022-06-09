@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const AboutUsPage = () => {
   const [videoEnded, setVideoEnded] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
 
   return (
     <div className={"about-us-wrapper"}>
@@ -19,12 +20,15 @@ const AboutUsPage = () => {
           height="100%"
           preload="auto"
           muted
+          onLoadedData={() => setVideoLoaded(true)}
           onEnded={() => setVideoEnded(true)}
         >
           <source src={BackgroundVideo} type="video/mp4" />
         </video>
       </motion.div>
-      <div className="about-us-info-wrapper">
+      <div
+        className={`about-us-info-wrapper ${videoLoaded ? "light-text" : ""}`}
+      >
         <div className="about-us-header">
           <h1>About us</h1>
         </div>
